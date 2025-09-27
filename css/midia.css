@@ -12,18 +12,18 @@ body {
     overflow-x: hidden;
 }
 
-.from {
+.from-logo {
     width: 150px;
     height: auto;
 }
 
-.hunter_mark {
+.hunter-mark {
     margin-left: 50px;
     width: 40px;
     height: auto;
 }
 
-header {
+.site-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -36,32 +36,58 @@ header {
     z-index: 1000;
 }
 
-header h1 {
+.game-title {
     font-family: 'UnifrakturCook', cursive;
     font-size: 24px;
     color: #b10101;
     margin: 0 auto 0 50px;
 }
 
-nav ul {
+.nav-list {
     list-style: none;
     display: flex;
     gap: 50px;
 }
 
-nav a {
+.nav-list a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-nav a:hover, nav a.active {
+.nav-list a:hover, .nav-list .active-link {
     color: #fc2020;
 }
 
-/* Hero Section for Media Page */
-.hero-media {
+.categories-nav {
+    margin-left: 5px;
+}
+
+.categories-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.categories-list a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    transition: all 0.3s;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.categories-list a:hover {
+    color: #fc2020;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.media-hero {
     position: relative;
     height: 40vh;
     display: flex;
@@ -76,12 +102,12 @@ nav a:hover, nav a.active {
     margin-top: 70px;
 }
 
-.hero-media .hero-content {
+.hero-content {
     max-width: 800px;
     padding: 20px;
 }
 
-.hero-media h2 {
+.media-hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px #000;
@@ -89,14 +115,13 @@ nav a:hover, nav a.active {
     font-family: 'UnifrakturCook', cursive;
 }
 
-.hero-media p {
+.media-hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
     text-shadow: 2px 2px 8px #000;
 }
 
-/* Media Sections */
-main {
+.main-content {
     padding: 40px 20px;
     background: #111;
 }
@@ -130,6 +155,9 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .media-item:hover {
@@ -148,85 +176,96 @@ main {
     padding: 1rem 1rem 0.5rem;
     color: #c00;
     font-size: 1.3rem;
+    margin: 0;
 }
 
 .media-item p {
     padding: 0 1rem 1rem;
     font-size: 0.9rem;
     color: #aaa;
-    min-height: 60px;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
 }
 
-.media-btn {
-    width: 100%;
-    padding: 10px;
-    background: #c41e3a;
-    color: #fff;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: auto;
-}
-
-.media-btn:hover {
-    background: #8b142a;
-}
-
-/* Footer */
-footer {
+.site-footer {
     background: #000;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
 }
 
-footer p {
+.site-footer p {
     color: #aaa;
 }
 
-footer a {
+.site-footer a {
     color: #c41e3a;
     text-decoration: none;
 }
 
-footer a:hover {
+.site-footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsiveness */
 @media (max-width: 768px) {
-    header {
+    .site-header {
         padding: 15px 20px;
         flex-wrap: wrap;
+        gap: 15px;
     }
     
-    header h1 {
-        margin: 10px 0;
-        order: 3;
-        width: 100%;
+    .game-title {
+        margin: 0;
+        order: 2;
+        flex: 1;
         text-align: center;
     }
     
-    nav ul {
+    .nav-list {
         gap: 20px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
     }
     
-    .hero-media h2 {
+    .categories-nav {
+        order: 4;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .categories-list {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .categories-list a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .media-hero {
+        height: 30vh;
+        margin-top: 140px;
+    }
+    
+    .media-hero h2 {
         font-size: 2rem;
     }
     
     .media-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
     }
     
     .media-section h2 {
         font-size: 2rem;
     }
-}
-
-@media (max-width: 480px) {
-    .media-grid {
-        grid-template-columns: 1fr;
+    
+    .main-content {
+        padding: 30px 15px;
     }
 }

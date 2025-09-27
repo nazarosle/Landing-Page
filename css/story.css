@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c0c0c;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.from-logo {
+    width: 150px;
+    height: auto;
+}
+
+.hunter-mark {
+    margin-left: 50px;
+    width: 40px;
+    height: auto;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.game-title {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 24px;
+    color: #b10101;
+    margin: 0 auto 0 50px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list .active-link {
+    color: #fc2020;
+}
+
+.story-hero {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+        url('https://c4.wallpaperflare.com/wallpaper/780/165/226/digital-art-artwork-video-games-bloodborne-wallpaper-preview.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 70px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.story-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px #000;
+    color: rgb(255, 0, 0);
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.story-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.story-content {
+    padding: 60px 20px;
+    background: #111;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-slide {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h3 {
+    font-size: 2.5rem;
+    color: #c41e3a;
+    margin-bottom: 20px;
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.story-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #c41e3a;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.highlight-card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #c41e3a;
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-card h4 {
+    color: #c41e3a;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    color: #bbb;
+    line-height: 1.5;
+}
+
+.timeline-section {
+    padding: 60px 20px;
+    background: #0a0a0a;
+}
+
+.timeline-section h3 {
+    font-size: 2.5rem;
+    color: #c41e3a;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #c41e3a;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-marker {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #c41e3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.marker-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+.timeline-content h4 {
+    color: #c41e3a;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: #bbb;
+}
+
+.site-footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.site-footer p {
+    color: #aaa;
+}
+
+.site-footer a {
+    color: #c41e3a;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .game-title {
+        margin: 0;
+        order: 2;
+        flex: 1;
+        text-align: center;
+    }
+
+    .nav-list {
+        gap: 20px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .story-hero h2 {
+        font-size: 2rem;
+    }
+
+    .story-slide {
+        flex-direction: column;
+    }
+
+    .story-image img {
+        height: 300px;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+    }
+
+    .marker-dot {
+        width: 15px;
+        height: 15px;
+    }
+}
